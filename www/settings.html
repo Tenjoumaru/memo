@@ -1,0 +1,118 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="slidingMenu.toggleMenu()"><ons-icon icon="bars"></ons-icon></ons-toolbar-button>
+        </div>
+        <div class="center">Settings Page</div>
+    </ons-toolbar>
+    
+    <div style="text-align: center">
+        <h1>Settings</h1>
+        <ons-button onclick="slidingMenu.setMainPage('map.html')">Back</ons-button>
+    </div>
+
+    <ons-list>
+        <ons-list-item ng-repeat="memo in memos" ng-click="show($index);">
+            {{memo.name}}
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">Item Title</span>
+                <span class="item-label">4h</span>
+              </header>
+              <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </ons-col>
+          </ons-row>                          
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">Another Item Title</span>
+                <span class="item-label">6h</span>
+              </header>
+              <p class="item-desc">Ut enim ad minim veniam.</p>
+            </ons-col>
+          </ons-row>                          
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">Yet Another Item Title</span>
+                <span class="item-label">1day ago</span>
+              </header>
+              <p class="item-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </ons-col>
+          </ons-row>                          
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="detail.html">
+    <ons-page id="detail-page">
+
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">Details</div>
+      </ons-toolbar>
+
+      <ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">Title</span>
+                <span class="item-label">Foobar</span>
+              </header>
+              <p class="item-desc">desc</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron" id="add-note-action" class="add-note-action-item">
+          <ons-icon icon="ion-chatboxes" fixed-width="true" style="color: #ccc"></ons-icon>
+          Add a note
+        </ons-list-item>
+      </ons-list>
+
+      <ons-list style="margin-top: 10px">
+        <ons-list-item class="item">
+          <header>
+            <span class="item-title">Lorem ipsum dolor sit amet</span>
+          </header>
+          <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </ons-list-item>
+        <ons-list-item class="item">
+          <header>
+            <span class="item-title">Lorem ipsum dolor sit amet</span>
+          </header>
+          <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </ons-list-item>
+        <ons-list-item class="item">
+          <header>
+            <span class="item-title">Lorem ipsum dolor sit amet</span>
+          </header>
+          <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </ons-list-item>
+      </ons-list>
+
+</ons-page>
